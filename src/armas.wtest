@@ -1,3 +1,4 @@
+import ejercicio.*
 
 describe "Test Armas"{
 	const arma1 = new Arma(nombre = "Lanzacohetes", poder = 100)

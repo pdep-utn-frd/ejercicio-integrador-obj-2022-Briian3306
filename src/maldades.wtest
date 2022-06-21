@@ -1,3 +1,4 @@
+import ejercicio.*
 
 describe "Test Villanos"{
 	var rosario  = new Ciudad(temperatura = 30)
@@ -6,16 +7,16 @@ describe "Test Villanos"{
 	var steve 	 = new Minion(bananas = 0)
 	var rayoC    = new Arma(nombre = "Rayo Congelante", poder = 10)
 
-	fixture{	
-		gru.agregarMinion(steve)
-		gru.nuevoMinion()
-		steve.otorgarArma(rayoC)
-		
-	}
+
 	method alimentarMinions(){
 		steve.alimentar(500)
 	}
-	
+	test "Se" {	
+		gru.agregarMinion(steve)
+		gru.nuevoMinion()
+		steve.otorgarArma(rayoC)
+		assert.equals(2,gru.cantidadMinions())
+	}
 	test "Si se alimenta, steve es reclutado" {
 		self.alimentarMinions()
 		gru.planificar(congelar)

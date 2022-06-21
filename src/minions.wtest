@@ -1,4 +1,4 @@
-
+import ejercicio.*
 
 describe "Test Minions"{
 
@@ -33,14 +33,17 @@ describe "Test Minions"{
 	}
 	test "Steve es de color amarillo"{
 		//assert
+		assert.equals("amarillo", steve.color())
 	}
 	test "steve toma el suero y cambia su color"{
 		steve.consumirSueroMutante()
 		//assert
+		assert.equals("violeta", steve.color())
 	}
 	test "Steve toma 2 veces el suero y es amarillo"{
 		2.times({a=>steve.consumirSueroMutante()})
 		//assert
+		assert.equals("amarillo", steve.color())
 	}
 	test "Jon toma el suero y se queda sin armas"{
 		jon.consumirSueroMutante()
